@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+            /* General body styling */
+            body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #003f5c, #665191, #f6b93b);
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        /* Header styling */
+        header {
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Container styling */
+        .container {
+            width: 80%;
+            max-width: 500px;
+            margin: 80px auto 20px; /* Top margin adjusted for fixed header */
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Content styling */
+        .content h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Input fields */
+        input[type="text"], input[type="password"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px; /* Added height for the bio textarea */
+            resize: vertical; /* Allow user to resize vertically */
+        }
+
+        input:focus, textarea:focus {
+            border-color: #333;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button styling */
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #55cc43;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #28a745; /* Green color */
+            color: #fff;
+        }
+
+        /* Login link styling */
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-link a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            padding: 10px;
+            background-color: #c4babb; /* Red background */
+            color: #000; /* Black text color */
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s, text-decoration 0.3s;
+        }
+
+        .login-link a:hover {
+            background-color: #b86d75; /* Darker red on hover */
+            text-decoration: underline;
+            text-decoration-color: #28a745; /* Green underline */
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+
+            input[type="text"], input[type="password"], input[type="email"], textarea {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Admin Register</h1>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>Create Your Account</h2>
+            <form action="register.php" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio"></textarea>
+
+                <label for="avatar">Avatar:</label>
+                <input type="file" id="avatar" name="avatar">
+
+                <button type="submit">Register</button>
+            </form>
+            <div class="login-link">
+                <a href="./admin_login.html">You already have an account?</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

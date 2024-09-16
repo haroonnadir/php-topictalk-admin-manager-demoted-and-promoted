@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p, form, input, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #003f5c, #665191, #f6b93b);
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        /* Header styling */
+        header {
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Container styling */
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding-top: 60px; /* Adjust for header height */
+        }
+
+        /* Content styling */
+        .content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Input fields */
+        input[type="text"], input[type="password"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #333;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button styling */
+        .buttons-container {
+            display: flex;
+            justify-content: space-between; /* Aligns buttons to the left and right */
+            margin-top: 20px;
+        }
+
+        .buttons-container button, .buttons-container .register-link a {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 0 5px;
+        }
+
+        .buttons-container button {
+            background-color: #28a745; /* Green color */
+            color: #fff;
+        }
+
+        .buttons-container button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        .buttons-container .register-link a {
+            background-color: #c4babb; /* Red background */
+            color: #000; /* Black text color */
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s, text-decoration 0.3s;
+        }
+
+        .buttons-container .register-link a:hover {
+            background-color: #b86d75; /* Darker red on hover */
+            text-decoration: underline;
+            text-decoration-color: #28a745; /* Green underline */
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                padding: 15px;
+            }
+
+            input[type="text"], input[type="password"], input[type="email"], textarea {
+                font-size: 14px;
+            }
+
+            .buttons-container button, .buttons-container .register-link a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Login</h1>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>Login to Your Account</h2>
+            <form action="login.php" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required aria-label="Username">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required aria-label="Password">
+                <div class="buttons-container">
+                    <button type="submit">Login</button>
+                    <div class="register-link">
+                        <a href="./admin_register.html">Register</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
